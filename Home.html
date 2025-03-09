@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nepotify - Home of Nepali Music</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="/Nepotify__1_-removebg-preview.png">
+    <script>
+        // Function to toggle play/pause
+        function togglePlay(audioId) {
+            const audio = document.getElementById(audioId);
+            const button = document.querySelector(`button[onclick="togglePlay('${audioId}')"]`);
+
+            if (audio.paused) {
+                audio.play();
+                button.innerHTML = '<i class="fas fa-pause"></i>';
+            } else {
+                audio.pause();
+                button.innerHTML = '<i class="fas fa-play"></i>';
+            }
+        }
+    </script>
+</head>
+
+
+<body>
+
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <a href="" style="text-decoration: none;">
+                <div class="logo">
+
+                    <img src="/Nepotify__1_-removebg-preview.png" style="height: 40px;" alt="Nepotify">
+                    <h1 style="font-size: 25px;">Nepotify</h1>
+
+                </div>
+            </a>
+            <!-- <div style="background-color: #3951C3; overflow: hidden;">
+                <p style="font-size: 15px; font-weight: bold; color: #ffffff; margin-left: 40px; ">MADE IN NEPAL</p>
+            </div> -->
+            <nav class="sidebar-nav">
+                <a href="/Home.html" class="nav-item active">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="" class="nav-item">
+                    <i class="fas fa-search"></i>
+                    <span>Search</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-book"></i>
+                    <span>Your Library</span>
+                </a>
+                <a href="/About us.html" class="nav-item">
+                    <i class="fas fa-book"></i>
+                    <span>About Us</span>
+                </a>
+
+                <div class="nav-section">
+                    <a href="#" class="nav-item">
+                        <i class="fas fa-plus-square"></i>
+                        <span>Create Playlist</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Liked Songs</span>
+                    </a>
+                </div>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" class="nav-item">
+                    <i class="fas fa-download"></i>
+                    <span>Install App</span>
+                </a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <!-- Top Navigation -->
+            <nav class="top-nav">
+                <div class="nav-controls">
+                    <button class="nav-control"><i class="fas fa-chevron-left"></i></button>
+                    <button class="nav-control"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="What do you want to listen to?">
+                </div>
+                <div class="auth-buttons">
+                    <a href="/signup.html"><button class="btn-signup">Sign Up</button></a>
+                    <a href="/login.HTML"><button class="btn-login">Log In</button></a>
+                </div>
+            </nav>
+
+            <!-- Main Content Sections -->
+            <div class="content-area">
+                <section class="popular-artists">
+                    <h2>Popular Artists</h2>
+                    <div class="artist-grid">
+                        <div class="artist-card">
+                            <img src="https://yt3.googleusercontent.com/ytc/AIdro_kbJowJBGONn_lzLzyjLFGVzAXHZQ-diWHaleNlk-7gaKv2=s900-c-k-c0x00ffffff-no-rj"
+                                alt="Artist">
+                            <h3>Sushant Kc</h3>
+                            <span>Artist</span>
+                        </div>
+                        <div class="artist-card">
+                            <img src="https://republicaimg.nagariknewscdn.com/shared/web/uploads/media/bipul-chhetri.jpg"
+                                alt="Artist">
+                            <h3>Bipul Chettri</h3>
+                            <span>Artist</span>
+                        </div>
+                        <div class="artist-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP5AY8wpa5_YGwEFN7pr9ARolMb5OoM6AuTQ&s"
+                                alt="Artist">
+                            <h3>Swoopna Suman</h3>
+                            <span>Artist</span>
+                        </div>
+                        <div class="artist-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7ugcISTh8rW94Iu8wifYQM-vd6-Ok8-XNaw&s"
+                                alt="Artist">
+                            <h3>Sugam Pokharel</h3>
+                            <span>Artist</span>
+                        </div>
+                        <div class="artist-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3guyWUxqa7GWgouDExHCxggkdifCiekDoww&s"
+                                alt="Artist">
+                            <h3>Sajjan Raj Vaidya</h3>
+                            <span>Artist</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Recommended for You Section -->
+                <section class="recommended-for-you">
+                    <h2>Recommended for You</h2>
+                    <div class="recommended-grid">
+                        <!-- Song 1 -->
+                        <div class="song-card">
+                            <img src="https://i.ytimg.com/vi/HAcLoqZO-Z0/maxresdefault.jpg" alt="Song Cover">
+                            <div class="song-info">
+                                <h3>BARDALI</h3>
+                                <p>Sushant</p>
+                            </div>
+                            <div class="play-button-container">
+                                <audio id="audio1"
+                                    src="/Sushant KC - Bardali ft. Indrakala Rai (Official Music Video).mp3"></audio>
+                                <button class="play-button" onclick="togglePlay('audio1')">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <div class="song-card">
+                            <img src="https://i.ytimg.com/vi/zIPW2auA6PM/maxresdefault.jpg" alt="Song Cover">
+                            <div class="song-info">
+                                <h3>KE GALTI</h3>
+                                <p>Sugam Pokharel</p>
+                            </div>
+                            <div class="play-button-container">
+                                <audio id="audio2"
+                                    src="/Sugam Pokharel - 1MB  Ke Galti  Official Music Video.mp3"></audio>
+                                <button class="play-button" onclick="togglePlay('audio2')">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <div class="song-card">
+                            <img src="https://i.ytimg.com/vi/XcEC2q4CotY/maxresdefault.jpg" alt="Song Cover">
+                            <div class="song-info">
+                                <h3>SASTO MUTU</h3>
+                                <p>Sajjan Raj Vaidya</p>
+                            </div>
+                            <div class="play-button-container">
+                                <audio id="audio3"
+                                    src="/Sajjan Raj Vaidya - Sasto Mutu [Official Release].mp3"></audio>
+                                <button class="play-button" onclick="togglePlay('audio3')">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <div class="song-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPUvh--8CX4V8Q-76IwYG_KzE2hmJ3_lNIjA&s" alt="Song Cover">
+                            <div class="song-info">
+                                <h3>RAM SAILEE</h3>
+                                <p>Bipul Chettri</p>
+                            </div>
+                            <div class="play-button-container">
+                                <audio id="audio4"
+                                    src="/Bipul Chettri - Ram Sailee (Ode to my Father).mp3"></audio>
+                                <button class="play-button" onclick="togglePlay('audio4')">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Repeat for other songs -->
+                    </div>
+
+
+                </section>
+                <section class="editor-playlists">
+                    <h2>Editor's Picks</h2>
+                    <div class="playlist-grid">
+                        <div class="playlist-card">
+                            <img src="https://travelphotodiscovery.com/wp-content/uploads/2017/06/Katmandu-palaces-and-temples-70.jpg" alt="Playlist">
+                            <h3>Nepali Classics</h3>
+                            <p>Timeless melodies</p>
+                        </div>
+                        <div class="playlist-card">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5542dc97e4b03d711b29857e/1491368111560-R2CNW0RDP4H5KAP90GR7/webakp-nepal-1999.jpg" alt="Playlist">
+                            <h3>Morning Nepal</h3>
+                            <p>Start your day right</p>
+                        </div>
+                        <div class="playlist-card">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/60/9b/53/a-new-york-city-style.jpg?w=500&h=500&s=1" alt="Playlist">
+                            <h3>Party Mix</h3>
+                            <p>Weekend vibes</p>
+                        </div>
+                        <div class="playlist-card">
+                            <img src="https://hospicecarelc.org/wp-content/uploads/2019/08/broken-heart-1024x684.jpg" alt="Playlist">
+                            <h3>Sad Zone</h3>
+                            <p>Emotional tunes</p>
+                        </div>
+                        <div class="playlist-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqz7TJNIHSAhETcpsP1eqXvlSznhHnWJbTSA&s" alt="Playlist">
+                            <h3>Chill Zone</h3>
+                            <p>Relaxing tunes</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Signup Banner -->
+    <div class="signup-banner">
+        <p>Preview of Nepotify</p>
+        <div>
+            <marquee behavior="" direction="left" loop="">
+                <p>Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.</p>
+            </marquee>
+        </div>
+        <a href="/signup.html"><button class="btn-signup">Sign up free</button></a>
+    </div>
+
+</body>
+
+</html>
